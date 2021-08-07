@@ -1,11 +1,13 @@
 package com.danieljayarajan.xmlrecipeapp.activities
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivityDetailedRecipeTypesBinding
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_detailed_recipe_types.*
 
 class DetailedRecipeTypeActivity: AppCompatActivity() {
@@ -14,7 +16,6 @@ class DetailedRecipeTypeActivity: AppCompatActivity() {
     private var binding: ActivityDetailedRecipeTypesBinding?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         onGetInputData()
         onBindData()
         setupUI()
@@ -35,6 +36,17 @@ class DetailedRecipeTypeActivity: AppCompatActivity() {
 
     private fun setupUI() {
         setupGlide()
+        setupText()
+        setupFAB()
+    }
+
+    private fun setupFAB() {
+        fab.setOnClickListener {
+            super.onBackPressed()
+        }
+    }
+
+    private fun setupText() {
         tvFoodName.text = recipeParams?.get("subname")
         tvIngredientDescriptions.text = recipeParams?.get("ingredients")
         tvDirectionDescriptions.text = recipeParams?.get("directions")
