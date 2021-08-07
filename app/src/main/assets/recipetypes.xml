@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recipetypes>
+    <recipetype>
+        <name>Breads, Muffins, &amp; Scones</name>
+        <subname>Sweet Carrot Bread</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/Sweet%20Carrot%20Bread.jpg</imageURL>
+        <ingredients>1 cup sliced carrots (about 1 can (14.5 ounces) or 2 to 3 fresh carrots), ⅔ cup packed brown sugar, 1 egg, lightly beaten, 1 cup nonfat or 1% milk, 1 teaspoon cinnamon, 2 cups baking mix (biscuit or pancake mix)</ingredients>
+    </recipetype>
+    <recipetype>
+        <name>Breakfast</name>
+        <subname>Fruit Shake 2 (With Milk and Yogurt)</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/fruit_shake_2_v_watermarked.jpg</imageURL>
+        <ingredients>2 cups fruit, 2 cups nonfat or 1% milk, 6 ounces low-fat vanilla yogurt, 1 cup orange juice</ingredients>
+    </recipetype>
+    <recipetype>
+        <name>Desserts</name>
+        <subname>Butternut Apple Crisp</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/Butternut%20Apple%20Crisp.jpg</imageURL>
+        <ingredients>1 small butternut squash (about 1 pound), 3 medium tart apples [3” diameter], peeled and sliced, 2 Tablespoons lemon juice, ¾ cup packed brown sugar, 1 Tablespoon corn starch, 1 teaspoon ground cinnamon, ½ teaspoon salt</ingredients>
+    </recipetype>
+    <recipetype>
+        <name>Dinner</name>
+        <subname>Chicken Casserole</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/chicken_dumplings_0.jpg</imageURL>
+        <ingredients>1 cup chopped carrots (about 2 small), 1 cup chopped celery (about 2 stalks), 3 cups low sodium chicken broth (see notes), 3 tablespoons flour, 2 cups cooked chicken, bite sized, 1 cup frozen peas</ingredients>
+    </recipetype>
+    <recipetype>
+        <name>Dips, Salad Dressings, Salsas, &amp; Sauces</name>
+        <subname>Any Berry Sauce</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/easy_quick_berry_sauce.jpg%20.jpg</imageURL>
+        <ingredients>¼ cup cold water, 1 Tablespoon cornstarch, ⅓ cup sugar, 4 cups berries, fresh or frozen (blackberries, raspberries, blueberries, sliced strawberries or a mixture)</ingredients>
+    </recipetype>
+    <recipetype>
+        <name>Drinks</name>
+        <subname>Glass of Sunshine Flavored Water</subname>
+        <imageURL>https://www.foodhero.org/sites/foodhero-prod/files/recipe-imgs/glass_of_sunshine_v_watermarked.jpg</imageURL>
+        <ingredients>1 orange</ingredients>
+        <ingredients>2 quarts water</ingredients>
+    </recipetype>
+</recipetypes>
