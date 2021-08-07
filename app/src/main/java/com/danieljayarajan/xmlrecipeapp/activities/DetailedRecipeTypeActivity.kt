@@ -37,6 +37,7 @@ class DetailedRecipeTypeActivity: AppCompatActivity() {
         setupGlide()
         tvFoodName.text = recipeParams?.get("subname")
         tvIngredientDescriptions.text = recipeParams?.get("ingredients")
+        tvDirectionDescriptions.text = recipeParams?.get("directions")
     }
 
     private fun setupGlide() {

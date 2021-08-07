@@ -5,8 +5,8 @@
       <map>
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.403125" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.403125" />
-        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_base_recipe_type.xml" value="0.18819655521783182" />
-        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_detailed_recipe_types.xml" value="0.18819655521783182" />
+        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_base_recipe_type.xml" value="0.5" />
+        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_detailed_recipe_types.xml" value="0.33" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_main.xml" value="0.21240942028985507" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_second.xml" value="0.21240942028985507" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />

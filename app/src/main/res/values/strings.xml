@@ -2,4 +2,6 @@
     <string name="app_name">Recipe App - Food Hero</string>
     <string name="presented_by">Presented by Daniel Gabrieal Jayarajan</string>
     <string name="ingredients">Ingredients</string>
+    <string name="directions">Directions</string>
+    <string name="select_one_of_these_recipe_types">Select One Of These Recipe Types</string>
 </resources>

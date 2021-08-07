@@ -16,6 +16,11 @@ import android.content.Intent
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivityBaseRecipeTypeBinding
 import kotlinx.android.synthetic.main.activity_base_recipe_type.*
+import android.widget.AutoCompleteTextView
+import android.widget.AdapterView.OnItemClickListener
+
+
+
 
 open class RecipeTypeBaseActivity : AppCompatActivity() {
     private var recipeDataHashMap = HashMap<String, String>()
@@ -49,8 +54,6 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
             val doc = docBuilder.parse(xmlData)
             val nList = doc.getElementsByTagName("recipetype")
 
-            languages.add("Select One Of These Recipe Types")
-
             for (i in 0 until nList.length) {
                 if (nList.item(0).nodeType == Node.ELEMENT_NODE) {
                     recipeDataHashMap = HashMap()
@@ -59,6 +62,7 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
                     recipeDataHashMap["subname"] = getNodeValue("subname", element)
                     recipeDataHashMap["imageURL"] = getNodeValue("imageURL", element)
                     recipeDataHashMap["ingredients"] = getNodeValue("ingredients", element)
+                    recipeDataHashMap["directions"] = getNodeValue("directions", element)
 
                     recipeDataHashMap["name"]?.let { languages.add(it) }
                     recipeList.add(recipeDataHashMap)
@@ -75,23 +79,15 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
     }
 
     private fun setupSpinner() {
-        if (spinner != null) {
+        if (tvDropDownSpinner != null) {
             val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, languages)
-            spinner.adapter = adapter
+            tvDropDownSpinner.setAdapter(adapter)
 
-            spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                    if(position != 0)
-                    {
-                        val intent = Intent(baseContext, DetailedRecipeTypeActivity::class.java)
-                        intent.putExtra("recipeList", recipeList[position-1])
-                        startActivity(intent)
-                    }
+            tvDropDownSpinner.onItemClickListener = OnItemClickListener { parent, view, position, rowId ->
+                val intent = Intent(baseContext, DetailedRecipeTypeActivity::class.java)
+                intent.putExtra("recipeList", recipeList[position])
+                startActivity(intent)
                 }
-
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                }
-            }
         }
     }
 
