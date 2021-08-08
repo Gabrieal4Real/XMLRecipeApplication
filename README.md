@@ -1,4 +1,5 @@
 # XMLRecipeAppForFortitudeAsia
+- Description: A small Recipe Application where the user will have the option to make one out of a few recipes with the added ingredient list and how to prepare the recipes
 
 # Instruction for installation
 - Make sure to use Gradle Version 11 if at some point gradle is not building
