@@ -20,12 +20,13 @@ import javax.xml.parsers.ParserConfigurationException
 
 
 open class RecipeTypeBaseActivity : AppCompatActivity() {
+
     private var recipeDataHashMap = HashMap<String, String>()
     private var recipeList: ArrayList<HashMap<String, String>> = ArrayList()
     private val languages = arrayListOf<String>()
 
-    private val navigator = Navigator()
     private var binding: ActivityBaseRecipeTypeBinding? = null
+    private val navigator = Navigator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

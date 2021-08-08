@@ -6,16 +6,17 @@ import androidx.databinding.DataBindingUtil
 import com.danieljayarajan.xmlrecipeapp.Navigator
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivitySplashScreenBinding
+import com.danieljayarajan.xmlrecipeapp.utils.SharedPrefsUtils
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
 
-    private val navigator = Navigator()
-
     private var binding: ActivitySplashScreenBinding? = null
+    private val navigator = Navigator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SharedPrefsUtils.initSharedUtils(this)
         onBindData()
         setupUI()
     }

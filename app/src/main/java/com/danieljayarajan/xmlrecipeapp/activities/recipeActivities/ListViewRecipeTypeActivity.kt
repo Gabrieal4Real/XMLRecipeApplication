@@ -16,6 +16,7 @@ class ListViewRecipeTypeActivity : AppCompatActivity() {
     private var recipeParams: ArrayList<HashMap<String, String>> = ArrayList()
     private var binding: ActivityListViewRecipeTypeBinding? = null
     private val navigator = Navigator()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         onGetInputData()
