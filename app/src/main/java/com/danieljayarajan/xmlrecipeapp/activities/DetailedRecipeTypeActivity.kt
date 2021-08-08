@@ -1,19 +1,20 @@
 package com.danieljayarajan.xmlrecipeapp.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivityDetailedRecipeTypesBinding
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_detailed_recipe_types.*
 
 class DetailedRecipeTypeActivity: AppCompatActivity() {
 
     private var recipeParams: HashMap<String, String>? = null
-    private var binding: ActivityDetailedRecipeTypesBinding?= null
+    private var binding: ActivityDetailedRecipeTypesBinding? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         onGetInputData()
@@ -28,7 +29,7 @@ class DetailedRecipeTypeActivity: AppCompatActivity() {
     }
 
     private fun onGetInputData() {
-        var recipeList = intent.getSerializableExtra("recipeList")
+        val recipeList = intent.getSerializableExtra("recipeList")
         if (recipeList != null) {
             recipeParams = recipeList as HashMap<String, String>?
         }
@@ -56,4 +57,11 @@ class DetailedRecipeTypeActivity: AppCompatActivity() {
         Glide.with(this).load(recipeParams?.get("imageURL")).into(ivRecipeImage)
     }
 
+    companion object {
+        fun getCallingIntent(context: Context?, recipeList: HashMap<String, String>): Intent {
+            val intent = Intent(context, DetailedRecipeTypeActivity::class.java)
+            intent.putExtra("recipeList", recipeList)
+            return intent
+        }
+    }
 }

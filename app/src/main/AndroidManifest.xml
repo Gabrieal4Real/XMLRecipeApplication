@@ -18,5 +18,6 @@
         </activity>
         <activity android:name=".activities.RecipeTypeBaseActivity"/>
         <activity android:name=".activities.DetailedRecipeTypeActivity"/>
+        <activity android:name=".activities.ListViewRecipeTypeActivity" />
     </application>
 </manifest>

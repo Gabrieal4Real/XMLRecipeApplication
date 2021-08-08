@@ -30,8 +30,17 @@
                 android:id="@+id/tvDropDownSpinner"
                 android:layout_height="60dp"
                 android:layout_width="match_parent"
-                android:inputType="none"/>
+                android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAllRecipes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/purple_700"
+            android:text="@string/see_all_recipes"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

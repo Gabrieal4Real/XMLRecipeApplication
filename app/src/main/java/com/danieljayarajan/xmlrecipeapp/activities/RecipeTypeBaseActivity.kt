@@ -1,25 +1,22 @@
 package com.danieljayarajan.xmlrecipeapp.activities
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import androidx.databinding.DataBindingUtil
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.danieljayarajan.xmlrecipeapp.Navigator
+import com.danieljayarajan.xmlrecipeapp.R
+import com.danieljayarajan.xmlrecipeapp.databinding.ActivityBaseRecipeTypeBinding
+import kotlinx.android.synthetic.main.activity_base_recipe_type.*
 import org.w3c.dom.Element
 import org.w3c.dom.Node
 import org.xml.sax.SAXException
 import java.io.IOException
 import javax.xml.parsers.DocumentBuilderFactory
 import javax.xml.parsers.ParserConfigurationException
-import android.content.Intent
-import com.danieljayarajan.xmlrecipeapp.R
-import com.danieljayarajan.xmlrecipeapp.databinding.ActivityBaseRecipeTypeBinding
-import kotlinx.android.synthetic.main.activity_base_recipe_type.*
-import android.widget.AutoCompleteTextView
-import android.widget.AdapterView.OnItemClickListener
-
-
 
 
 open class RecipeTypeBaseActivity : AppCompatActivity() {
@@ -27,7 +24,8 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
     private var recipeList: ArrayList<HashMap<String, String>> = ArrayList()
     private val languages = arrayListOf<String>()
 
-    private var binding: ActivityBaseRecipeTypeBinding?= null
+    private val navigator = Navigator()
+    private var binding: ActivityBaseRecipeTypeBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +41,13 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
     private fun setupUI() {
         setupHashMap()
         setupSpinner()
+        setupButton()
+    }
+
+    private fun setupButton() {
+        btnAllRecipes.setOnClickListener {
+            navigator.navigateToListViewRecipeTypeActivity(baseContext, recipeList)
+        }
     }
 
     private fun setupHashMap() {
@@ -84,9 +89,7 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
             tvDropDownSpinner.setAdapter(adapter)
 
             tvDropDownSpinner.onItemClickListener = OnItemClickListener { parent, view, position, rowId ->
-                val intent = Intent(baseContext, DetailedRecipeTypeActivity::class.java)
-                intent.putExtra("recipeList", recipeList[position])
-                startActivity(intent)
+                navigator.navigateToDetailedRecipeTypeActivity(baseContext, recipeList[position])
                 }
         }
     }
@@ -107,4 +110,11 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
         return ""
     }
 
+    companion object {
+        fun getCallingIntent(context: Context?): Intent {
+            val intent = Intent(context, RecipeTypeBaseActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            return intent
+        }
+    }
 }
