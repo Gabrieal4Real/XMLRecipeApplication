@@ -6,12 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
+        android:padding="20dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/ivHomeScreen"
             android:layout_width="180dp"
             android:layout_height="180dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="80dp"
             android:layout_gravity="center"
             android:src="@drawable/applogo"
@@ -23,7 +25,6 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:fontFamily="@font/roboto_regular"
-            android:layout_margin="20dp"
             android:layout_gravity="center">
 
             <AutoCompleteTextView
@@ -35,11 +36,15 @@
 
         <Button
             android:id="@+id/btnAllRecipes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/purple_200"
+            android:fontFamily="@font/roboto_regular"
+            android:textAllCaps="false"
             android:layout_gravity="center"
-            android:background="@color/purple_700"
             android:text="@string/see_all_recipes"
+            android:textSize="16sp"
             android:textColor="@color/white" />
 
     </LinearLayout>

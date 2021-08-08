@@ -8,8 +8,11 @@
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_base_recipe_type.xml" value="0.25" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_detailed_recipe_types.xml" value="0.22" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_list_view_recipe_type.xml" value="0.30434782608695654" />
+        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_main.xml" value="0.21240942028985507" />
+        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_registration.xml" value="0.2916666666666667" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_second.xml" value="0.21240942028985507" />
+        <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_sign_up.xml" value="0.26721014492753625" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.33" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/android_main.xml" value="0.21240942028985507" />
         <entry key="..\:/Android/XMLRecipeApp/app/src/main/res/layout/custom_list.xml" value="0.5" />

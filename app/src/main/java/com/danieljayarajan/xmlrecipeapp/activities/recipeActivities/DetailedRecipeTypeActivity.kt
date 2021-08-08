@@ -1,4 +1,4 @@
-package com.danieljayarajan.xmlrecipeapp.activities
+package com.danieljayarajan.xmlrecipeapp.activities.recipeActivities
 
 import android.content.Context
 import android.content.Intent

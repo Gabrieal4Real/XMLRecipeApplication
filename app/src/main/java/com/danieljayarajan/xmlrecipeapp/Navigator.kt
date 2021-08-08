@@ -2,13 +2,28 @@ package com.danieljayarajan.xmlrecipeapp
 
 import android.content.Context
 import android.content.Intent
-import com.danieljayarajan.xmlrecipeapp.activities.DetailedRecipeTypeActivity
-import com.danieljayarajan.xmlrecipeapp.activities.ListViewRecipeTypeActivity
-import com.danieljayarajan.xmlrecipeapp.activities.RecipeTypeBaseActivity
+import com.danieljayarajan.xmlrecipeapp.activities.loginActivities.LoginActivity
+import com.danieljayarajan.xmlrecipeapp.activities.loginActivities.SignUpActivity
+import com.danieljayarajan.xmlrecipeapp.activities.recipeActivities.DetailedRecipeTypeActivity
+import com.danieljayarajan.xmlrecipeapp.activities.recipeActivities.ListViewRecipeTypeActivity
+import com.danieljayarajan.xmlrecipeapp.activities.recipeActivities.RecipeTypeBaseActivity
 
 class Navigator {
     fun navigateToRecipeTypeActivity(context: Context) {
         val intent = RecipeTypeBaseActivity.getCallingIntent(context)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        context.startActivity(intent)
+    }
+
+    fun navigateToLoginActivity(context: Context) {
+        val intent = LoginActivity.getCallingIntent(context)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        context.startActivity(intent)
+    }
+
+    fun navigateToSignUpActivity(context: Context) {
+        val intent = SignUpActivity.getCallingIntent(context)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         context.startActivity(intent)
     }
 

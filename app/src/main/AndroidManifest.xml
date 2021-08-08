@@ -9,15 +9,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.XMLRecipeApp" >
-        <activity android:name=".activities.SplashScreenActivity">
+        android:theme="@style/Theme.XMLRecipeApp">
+        <activity android:name=".activities.baseActivities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.RecipeTypeBaseActivity"/>
-        <activity android:name=".activities.DetailedRecipeTypeActivity"/>
-        <activity android:name=".activities.ListViewRecipeTypeActivity" />
+        <activity android:name=".activities.recipeActivities.RecipeTypeBaseActivity" />
+        <activity android:name=".activities.recipeActivities.DetailedRecipeTypeActivity" />
+        <activity android:name=".activities.recipeActivities.ListViewRecipeTypeActivity" />
+        <activity android:name=".activities.loginActivities.LoginActivity" />
+        <activity android:name=".activities.loginActivities.SignUpActivity" />
     </application>
 </manifest>

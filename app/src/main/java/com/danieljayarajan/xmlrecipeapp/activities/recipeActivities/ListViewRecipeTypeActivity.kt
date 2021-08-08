@@ -1,4 +1,4 @@
-package com.danieljayarajan.xmlrecipeapp.activities
+package com.danieljayarajan.xmlrecipeapp.activities.recipeActivities
 
 import android.content.Context
 import android.content.Intent
@@ -31,7 +31,7 @@ class ListViewRecipeTypeActivity : AppCompatActivity() {
         val adapter = SimpleAdapter(
             this,
             recipeParams,
-            R.layout.custom_list,
+            R.layout.item_custom_list,
             arrayOf("name", "subname"),
             intArrayOf(R.id.tvName, R.id.tvSubName)
         )

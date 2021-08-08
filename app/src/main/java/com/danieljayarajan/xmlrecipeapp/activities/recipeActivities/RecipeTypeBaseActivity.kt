@@ -1,4 +1,4 @@
-package com.danieljayarajan.xmlrecipeapp.activities
+package com.danieljayarajan.xmlrecipeapp.activities.recipeActivities
 
 import android.content.Context
 import android.content.Intent
@@ -113,7 +113,6 @@ open class RecipeTypeBaseActivity : AppCompatActivity() {
     companion object {
         fun getCallingIntent(context: Context?): Intent {
             val intent = Intent(context, RecipeTypeBaseActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             return intent
         }
     }

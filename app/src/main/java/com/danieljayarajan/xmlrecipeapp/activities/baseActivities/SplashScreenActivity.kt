@@ -1,4 +1,4 @@
-package com.danieljayarajan.xmlrecipeapp.activities
+package com.danieljayarajan.xmlrecipeapp.activities.baseActivities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +20,6 @@ class SplashScreenActivity : AppCompatActivity() {
         setupUI()
     }
 
-
     private fun onBindData() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_screen)
         binding?.lifecycleOwner = this
@@ -29,7 +28,7 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun setupUI() {
         ivSplashScreen.alpha = 0f
         ivSplashScreen.animate().setDuration(2000).alpha(1f).withEndAction{
-            navigator.navigateToRecipeTypeActivity(this@SplashScreenActivity)
+            navigator.navigateToLoginActivity(this@SplashScreenActivity)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
