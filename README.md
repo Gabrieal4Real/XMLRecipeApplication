@@ -15,4 +15,4 @@
 - Recipe and Images are taken from https://www.foodhero.org
 
 # Note
-- This application is an Assessment for Fortitude Asia writen by Daniel Gabrieal Jayarajan
+- This application is completed by Daniel Gabrieal Jayarajan
