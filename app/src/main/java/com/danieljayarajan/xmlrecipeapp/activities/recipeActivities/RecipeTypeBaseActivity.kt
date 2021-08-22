@@ -7,7 +7,7 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.danieljayarajan.xmlrecipeapp.Navigator
+import com.danieljayarajan.xmlrecipeapp.helpers.Navigator
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivityBaseRecipeTypeBinding
 import kotlinx.android.synthetic.main.activity_base_recipe_type.*

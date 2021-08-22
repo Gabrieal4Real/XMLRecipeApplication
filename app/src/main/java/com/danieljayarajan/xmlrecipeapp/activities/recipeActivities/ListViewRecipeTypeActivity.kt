@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.SimpleAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.danieljayarajan.xmlrecipeapp.Navigator
+import com.danieljayarajan.xmlrecipeapp.helpers.Navigator
 import com.danieljayarajan.xmlrecipeapp.R
 import com.danieljayarajan.xmlrecipeapp.databinding.ActivityListViewRecipeTypeBinding
 import kotlinx.android.synthetic.main.activity_list_view_recipe_type.*
