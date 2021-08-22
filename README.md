@@ -17,4 +17,4 @@ Go to File > Settings > Build, Execution, Deployment > Build Tools > Gradle. Her
 - Recipe and Images are taken from https://www.foodhero.org
 
 ## APK
-- https://drive.google.com/file/d/1UfNSeBHaVxanmqtpfP9gKD2HzC2t8vvo/view?usp=sharing
+https://drive.google.com/file/d/1UfNSeBHaVxanmqtpfP9gKD2HzC2t8vvo/view?usp=sharing
